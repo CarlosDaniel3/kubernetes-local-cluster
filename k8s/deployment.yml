@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-viacep
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: api-viacep
+  template:
+    metadata:
+      labels:
+        app: api-viacep
+    spec:
+      containers:
+      - name: api-viacep
+        image: carlosdaniel2/viacep
+        ports:
+        - containerPort: 80
