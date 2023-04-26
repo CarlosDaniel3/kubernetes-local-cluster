@@ -9,6 +9,7 @@ spec:
       app: viacep-api
   template:
     metadata:
+      namespace: frontend-ns
       labels:
         app: viacep-api
     spec:
